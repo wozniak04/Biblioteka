@@ -66,6 +66,18 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>BazaDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DodawanieWypozyczenia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DodawanieWypozyczenia.Designer.cs">
+      <DependentUpon>DodawanieWypozyczenia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GlownaBibliotekarka.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GlownaBibliotekarka.Designer.cs">
+      <DependentUpon>GlownaBibliotekarka.cs</DependentUpon>
+    </Compile>
     <Compile Include="GlownaUczen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -78,8 +90,15 @@
     <Compile Include="Logowanie.Designer.cs">
       <DependentUpon>Logowanie.cs</DependentUpon>
     </Compile>
+    <Compile Include="Polaczenie.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="DodawanieWypozyczenia.resx">
+      <DependentUpon>DodawanieWypozyczenia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GlownaBibliotekarka.resx">
+      <DependentUpon>GlownaBibliotekarka.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GlownaUczen.resx">
       <DependentUpon>GlownaUczen.cs</DependentUpon>
     </EmbeddedResource>

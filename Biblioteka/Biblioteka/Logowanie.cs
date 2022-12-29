@@ -21,9 +21,12 @@ namespace Biblioteka
         {
             string nazwa = tNazwa.Text.ToString();
             string haslo = tHaslo.Text.ToString();
-            GlownaUczen okno = new GlownaUczen(nazwa);
+            var okno = new GlownaBibliotekarka(nazwa);
+            this.Hide();
             okno.ShowDialog();
-            
+            this.Close();
+
+
         }
     }
 }
