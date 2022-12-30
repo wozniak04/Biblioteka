@@ -19,14 +19,32 @@ namespace Biblioteka
 
         private void bLog_Click(object sender, EventArgs e)
         {
-            string nazwa = tNazwa.Text.ToString();
-            string haslo = tHaslo.Text.ToString();
-            var okno = new GlownaBibliotekarka(nazwa);
-            this.Hide();
+            var pol = new Polaczenie();
+            if (pol.log(tNazwa.Text,tHaslo.Text).Equals("B")) 
+            {
+                var okno = new GlownaBibliotekarka();
+                this.Hide();
+                okno.ShowDialog();
+                this.Close(); 
+            }else if (pol.log(tNazwa.Text, tHaslo.Text).Equals("U"))
+            {
+                var okno = new GlownaUczen(pol.GetPesel(tNazwa.Text, tHaslo.Text));
+                this.Hide();
+                okno.ShowDialog();
+                this.Close();
+            }
+            else
+            {
+                lBlad.Visible = true;
+            }
+        }
+
+        private void bRej_Click(object sender, EventArgs e)
+        {
+            var okno = new Rejestracja();
+            
             okno.ShowDialog();
-            this.Close();
-
-
+            
         }
     }
 }

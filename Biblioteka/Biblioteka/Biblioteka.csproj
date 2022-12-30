@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{F77F3577-AB93-4671-93B9-D033A16DBAB5}</ProjectGuid>
+    <ProjectGuid>{C5231364-4E8D-4CFB-96F0-9454387D52FF}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>Biblioteka</RootNamespace>
     <AssemblyName>Biblioteka</AssemblyName>
@@ -12,6 +12,7 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>publikuj\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -24,7 +25,6 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
@@ -48,7 +48,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="System" />
+    <Reference Include="System">
+      <HintPath>..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
+    </Reference>
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -61,16 +63,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BazaDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>BazaDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="DodawanieWypozyczenia.cs">
+    <Compile Include="DoOddania.cs" />
+    <Compile Include="GlownaUczen.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DodawanieWypozyczenia.Designer.cs">
-      <DependentUpon>DodawanieWypozyczenia.cs</DependentUpon>
+    <Compile Include="GlownaUczen.Designer.cs">
+      <DependentUpon>GlownaUczen.cs</DependentUpon>
     </Compile>
     <Compile Include="GlownaBibliotekarka.cs">
       <SubType>Form</SubType>
@@ -78,12 +76,13 @@
     <Compile Include="GlownaBibliotekarka.Designer.cs">
       <DependentUpon>GlownaBibliotekarka.cs</DependentUpon>
     </Compile>
-    <Compile Include="GlownaUczen.cs">
+    <Compile Include="DodawanieWypozyczenia.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GlownaUczen.Designer.cs">
-      <DependentUpon>GlownaUczen.cs</DependentUpon>
+    <Compile Include="DodawanieWypozyczenia.Designer.cs">
+      <DependentUpon>DodawanieWypozyczenia.cs</DependentUpon>
     </Compile>
+    <Compile Include="Ksiazki.cs" />
     <Compile Include="Logowanie.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -93,6 +92,12 @@
     <Compile Include="Polaczenie.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Rejestracja.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Rejestracja.Designer.cs">
+      <DependentUpon>Rejestracja.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="DodawanieWypozyczenia.resx">
       <DependentUpon>DodawanieWypozyczenia.cs</DependentUpon>
     </EmbeddedResource>
@@ -114,17 +119,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <None Include="BazaDataSet.xsc">
-      <DependentUpon>BazaDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="BazaDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>BazaDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="BazaDataSet.xss">
-      <DependentUpon>BazaDataSet.xsd</DependentUpon>
-    </None>
+    <EmbeddedResource Include="Rejestracja.resx">
+      <DependentUpon>Rejestracja.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -139,15 +136,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Baza.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Baza_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <DependentUpon>Baza.mdf</DependentUpon>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
       <Visible>False</Visible>
       <ProductName>Microsoft .NET Framework 4.7.2 %28x86 i x64%29</ProductName>
@@ -158,6 +146,18 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bazadanych.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="bazadanych_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>bazadanych.mdf</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

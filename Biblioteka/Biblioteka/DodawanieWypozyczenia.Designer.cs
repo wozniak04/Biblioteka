@@ -29,6 +29,7 @@ namespace Biblioteka
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -38,6 +39,8 @@ namespace Biblioteka
             this.tTytul = new System.Windows.Forms.TextBox();
             this.Tpesel = new System.Windows.Forms.TextBox();
             this.bDodaj = new System.Windows.Forms.Button();
+            
+           
             this.SuspendLayout();
             // 
             // label1
@@ -83,7 +86,7 @@ namespace Biblioteka
             // tImie
             // 
             this.tImie.Font = new System.Drawing.Font("Bahnschrift", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.tImie.Location = new System.Drawing.Point(64, 65);
+            this.tImie.Location = new System.Drawing.Point(60, 67);
             this.tImie.Name = "tImie";
             this.tImie.Size = new System.Drawing.Size(266, 21);
             this.tImie.TabIndex = 4;
@@ -106,6 +109,7 @@ namespace Biblioteka
             // 
             // Tpesel
             // 
+           
             this.Tpesel.Font = new System.Drawing.Font("Bahnschrift", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.Tpesel.Location = new System.Drawing.Point(75, 201);
             this.Tpesel.Name = "Tpesel";
@@ -122,6 +126,7 @@ namespace Biblioteka
             this.bDodaj.Text = "Dodaj";
             this.bDodaj.UseVisualStyleBackColor = true;
             this.bDodaj.Click += new System.EventHandler(this.bDodaj_Click);
+           
             // 
             // DodawanieWypozyczenia
             // 
@@ -139,6 +144,7 @@ namespace Biblioteka
             this.Controls.Add(this.label1);
             this.Name = "DodawanieWypozyczenia";
             this.Text = "DodawanieWypozyczenia";
+  
             this.ResumeLayout(false);
             this.PerformLayout();
 

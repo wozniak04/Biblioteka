@@ -17,14 +17,11 @@ namespace Biblioteka
             InitializeComponent();
         }
 
+              
+
         private void bDodaj_Click(object sender, EventArgs e)
         {
-            var pol = new Polaczenie();
-            string imie = tImie.Text.ToString();
-            string nazwisko = tNazwisko.Text.ToString();
-            string ksiazka = tTytul.Text.ToString();
-            string pesel = Tpesel.Text.ToString();
-            pol.dodajksiazke(imie,nazwisko,ksiazka,pesel);
+          
         }
     }
 }

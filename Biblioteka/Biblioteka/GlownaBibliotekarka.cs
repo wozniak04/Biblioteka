@@ -12,22 +12,24 @@ namespace Biblioteka
 {
     public partial class GlownaBibliotekarka : Form
     {
-        private string Nazwa;
-        public GlownaBibliotekarka(string nazwa)
+        public GlownaBibliotekarka()
         {
             InitializeComponent();
-            this.Nazwa = nazwa;
-        }
-
-        private void bZwrot_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void bDodaj_Click(object sender, EventArgs e)
         {
             var okno = new DodawanieWypozyczenia();
             okno.ShowDialog();
+        }
+
+        private void GlownaBibliotekarka_Load(object sender, EventArgs e)
+        {
+            var pol = new Polaczenie();
+
+            var binding = new BindingList<DoOddania>(pol.wczytajKsiazkiB());
+            var source = new BindingSource(binding, null);
+            dtgKsiazki.DataSource = source;
         }
     }
 }

@@ -12,18 +12,19 @@ namespace Biblioteka
 {
     public partial class GlownaUczen : Form
     {
-        private string Nazwa;
-        public GlownaUczen(string nazwa)
+        private string Pesel;
+        public GlownaUczen(string pesel)
         {
             InitializeComponent();
-            this.Nazwa = nazwa;
+            this.Pesel = pesel;
         }
 
         private void GlownaUczen_Load(object sender, EventArgs e)
         {
-            // TODO: Ten wiersz kodu wczytuje dane do tabeli 'bazaDataSet.Wypozyczone' . Możesz go przenieść lub usunąć.
-            this.wypozyczoneTableAdapter.Fill(this.bazaDataSet.Wypozyczone);
-
+            var pol = new Polaczenie();
+            var binding = new BindingList<Ksiazki>(pol.wczytajKsiazkiU(this.Pesel));
+            var source = new BindingSource(binding, null);
+            dtgKsiazki.DataSource = source;
         }
     }
 }

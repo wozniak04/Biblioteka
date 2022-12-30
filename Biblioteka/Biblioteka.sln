@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.32802.440
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Biblioteka", "Biblioteka\Biblioteka.csproj", "{F77F3577-AB93-4671-93B9-D033A16DBAB5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Biblioteka", "Biblioteka\Biblioteka.csproj", "{C5231364-4E8D-4CFB-96F0-9454387D52FF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{F77F3577-AB93-4671-93B9-D033A16DBAB5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F77F3577-AB93-4671-93B9-D033A16DBAB5}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F77F3577-AB93-4671-93B9-D033A16DBAB5}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F77F3577-AB93-4671-93B9-D033A16DBAB5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C5231364-4E8D-4CFB-96F0-9454387D52FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C5231364-4E8D-4CFB-96F0-9454387D52FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C5231364-4E8D-4CFB-96F0-9454387D52FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C5231364-4E8D-4CFB-96F0-9454387D52FF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {A1870C04-15DF-4CBB-A653-C6AE08D5875A}
+		SolutionGuid = {89670398-54A4-456F-A1CD-69B23F8625B1}
 	EndGlobalSection
 EndGlobal

@@ -34,6 +34,8 @@ namespace Biblioteka
             this.tNazwa = new System.Windows.Forms.TextBox();
             this.tHaslo = new System.Windows.Forms.TextBox();
             this.bLog = new System.Windows.Forms.Button();
+            this.bRej = new System.Windows.Forms.Button();
+            this.lBlad = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -84,11 +86,36 @@ namespace Biblioteka
             this.bLog.UseVisualStyleBackColor = true;
             this.bLog.Click += new System.EventHandler(this.bLog_Click);
             // 
+            // bRej
+            // 
+            this.bRej.Font = new System.Drawing.Font("Bahnschrift", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.bRej.Location = new System.Drawing.Point(291, 250);
+            this.bRej.Name = "bRej";
+            this.bRej.Size = new System.Drawing.Size(89, 23);
+            this.bRej.TabIndex = 5;
+            this.bRej.Text = "Rejestracja";
+            this.bRej.UseVisualStyleBackColor = true;
+            this.bRej.Click += new System.EventHandler(this.bRej_Click);
+            // 
+            // lBlad
+            // 
+            this.lBlad.AutoSize = true;
+            this.lBlad.Font = new System.Drawing.Font("Bahnschrift", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lBlad.ForeColor = System.Drawing.Color.Red;
+            this.lBlad.Location = new System.Drawing.Point(287, 276);
+            this.lBlad.Name = "lBlad";
+            this.lBlad.Size = new System.Drawing.Size(266, 23);
+            this.lBlad.TabIndex = 6;
+            this.lBlad.Text = "Niepoprawne hasło lub nazwa";
+            this.lBlad.Visible = false;
+            // 
             // Logowanie
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lBlad);
+            this.Controls.Add(this.bRej);
             this.Controls.Add(this.bLog);
             this.Controls.Add(this.tHaslo);
             this.Controls.Add(this.tNazwa);
@@ -108,6 +135,8 @@ namespace Biblioteka
         private System.Windows.Forms.TextBox tNazwa;
         private System.Windows.Forms.TextBox tHaslo;
         private System.Windows.Forms.Button bLog;
+        private System.Windows.Forms.Button bRej;
+        private System.Windows.Forms.Label lBlad;
     }
 }
 
