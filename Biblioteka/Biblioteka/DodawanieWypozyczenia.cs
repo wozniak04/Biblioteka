@@ -21,7 +21,20 @@ namespace Biblioteka
 
         private void bDodaj_Click(object sender, EventArgs e)
         {
-          
+            var pol = new Polaczenie();
+            if(!(string.IsNullOrEmpty(tImie.Text) && string.IsNullOrEmpty(tNazwisko.Text) && string.IsNullOrEmpty(tTytul.Text) && string.IsNullOrEmpty(Tpesel.Text)))
+                if (pol.DodajWypozyczenie(tImie.Text, tNazwisko.Text, tTytul.Text, Tpesel.Text))
+                {
+                    MessageBox.Show("dodano pomyślnie");
+                }
+                else
+                {
+                    MessageBox.Show("wystąpił błąd przy dodawaniu rekordów do bazy");
+                }
+            else
+            {
+                MessageBox.Show("błąd w danych");
+            }
         }
     }
 }

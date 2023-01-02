@@ -135,6 +135,7 @@ namespace Biblioteka
             this.bSzukaj.TabIndex = 10;
             this.bSzukaj.Text = "Szukaj";
             this.bSzukaj.UseVisualStyleBackColor = true;
+            this.bSzukaj.Click += new System.EventHandler(this.bSzukaj_Click);
             // 
             // dtgKsiazki
             // 

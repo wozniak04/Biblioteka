@@ -118,5 +118,49 @@ namespace Biblioteka
             return ksiazki;
         }
 
+        public bool DodajWypozyczenie(string imie,string nazwisko,string ksiazka,string pesel)
+        {
+
+            DateTime odkiedy = DateTime.Today.Date;
+            DateTime dokiedy = odkiedy.AddMonths(1);
+            conn.Open();
+            string pyt = $"INSERT INTO Wypozyczenia (Imie,Nazwisko,Ksiazka,OdKiedy,DoKiedy,Pesel) VALUES ('{imie}','{nazwisko}','{ksiazka}','{odkiedy.ToString("yyyy-mm-dd")}','{dokiedy.ToString("yyyy-mm-dd")}','{pesel}')";
+
+            var cmd = new SqlCommand(pyt, conn);
+
+            int i = cmd.ExecuteNonQuery();
+
+            conn.Close();
+            if (i < 0)
+            {
+                return false;
+            }
+            return true;
+        }
+
+        public List<DoOddania> SzukajKsiazkiB(string imie,string nazwisko,string pesel)
+        {
+            List<DoOddania> ksiazki = new List<DoOddania>();
+
+            conn.Open();
+            string pyt = $"SELECT Imie,Nazwisko,Ksiazka,OdKiedy,DoKiedy,Pesel FROM Wypozyczenia WHERE Imie='{imie}' AND Nazwisko='{nazwisko}' AND Pesel='{pesel}'";
+
+            var cmd = new SqlCommand(pyt, conn);
+
+            SqlDataReader reader;
+
+            reader = cmd.ExecuteReader();
+            while (reader.Read())
+            {
+                ksiazki.Add(new DoOddania(reader["Imie"].ToString(), reader["Nazwisko"].ToString(), reader["Ksiazka"].ToString(), reader["OdKiedy"].ToString(), reader["DoKiedy"].ToString(), reader["Pesel"].ToString()));
+
+            }
+            conn.Close();
+
+            return ksiazki;
+        }
+
+
+
     }
 }
