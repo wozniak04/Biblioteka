@@ -29,7 +29,6 @@ namespace Biblioteka
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -39,8 +38,6 @@ namespace Biblioteka
             this.tTytul = new System.Windows.Forms.TextBox();
             this.Tpesel = new System.Windows.Forms.TextBox();
             this.bDodaj = new System.Windows.Forms.Button();
-            
-           
             this.SuspendLayout();
             // 
             // label1
@@ -87,6 +84,7 @@ namespace Biblioteka
             // 
             this.tImie.Font = new System.Drawing.Font("Bahnschrift", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.tImie.Location = new System.Drawing.Point(60, 67);
+            this.tImie.MaxLength = 50;
             this.tImie.Name = "tImie";
             this.tImie.Size = new System.Drawing.Size(266, 21);
             this.tImie.TabIndex = 4;
@@ -95,6 +93,7 @@ namespace Biblioteka
             // 
             this.tNazwisko.Font = new System.Drawing.Font("Bahnschrift", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.tNazwisko.Location = new System.Drawing.Point(110, 113);
+            this.tNazwisko.MaxLength = 50;
             this.tNazwisko.Name = "tNazwisko";
             this.tNazwisko.Size = new System.Drawing.Size(220, 21);
             this.tNazwisko.TabIndex = 5;
@@ -103,15 +102,16 @@ namespace Biblioteka
             // 
             this.tTytul.Font = new System.Drawing.Font("Bahnschrift", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.tTytul.Location = new System.Drawing.Point(94, 155);
+            this.tTytul.MaxLength = 50;
             this.tTytul.Name = "tTytul";
             this.tTytul.Size = new System.Drawing.Size(278, 21);
             this.tTytul.TabIndex = 6;
             // 
             // Tpesel
             // 
-           
             this.Tpesel.Font = new System.Drawing.Font("Bahnschrift", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.Tpesel.Location = new System.Drawing.Point(75, 201);
+            this.Tpesel.MaxLength = 11;
             this.Tpesel.Name = "Tpesel";
             this.Tpesel.Size = new System.Drawing.Size(251, 21);
             this.Tpesel.TabIndex = 7;
@@ -126,7 +126,6 @@ namespace Biblioteka
             this.bDodaj.Text = "Dodaj";
             this.bDodaj.UseVisualStyleBackColor = true;
             this.bDodaj.Click += new System.EventHandler(this.bDodaj_Click);
-           
             // 
             // DodawanieWypozyczenia
             // 
@@ -144,7 +143,6 @@ namespace Biblioteka
             this.Controls.Add(this.label1);
             this.Name = "DodawanieWypozyczenia";
             this.Text = "DodawanieWypozyczenia";
-  
             this.ResumeLayout(false);
             this.PerformLayout();
 

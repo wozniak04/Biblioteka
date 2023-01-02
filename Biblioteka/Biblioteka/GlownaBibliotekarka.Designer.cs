@@ -109,6 +109,7 @@ namespace Biblioteka
             // tImie
             // 
             this.tImie.Location = new System.Drawing.Point(80, 12);
+            this.tImie.MaxLength = 50;
             this.tImie.Name = "tImie";
             this.tImie.Size = new System.Drawing.Size(246, 20);
             this.tImie.TabIndex = 7;
@@ -116,6 +117,7 @@ namespace Biblioteka
             // tNazwisko
             // 
             this.tNazwisko.Location = new System.Drawing.Point(481, 14);
+            this.tNazwisko.MaxLength = 50;
             this.tNazwisko.Name = "tNazwisko";
             this.tNazwisko.Size = new System.Drawing.Size(246, 20);
             this.tNazwisko.TabIndex = 8;
@@ -123,6 +125,7 @@ namespace Biblioteka
             // tPesel
             // 
             this.tPesel.Location = new System.Drawing.Point(91, 57);
+            this.tPesel.MaxLength = 11;
             this.tPesel.Name = "tPesel";
             this.tPesel.Size = new System.Drawing.Size(246, 20);
             this.tPesel.TabIndex = 9;

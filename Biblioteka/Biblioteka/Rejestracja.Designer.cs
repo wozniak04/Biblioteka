@@ -120,6 +120,7 @@ namespace Biblioteka
             // 
             this.tImie.Font = new System.Drawing.Font("Bahnschrift", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.tImie.Location = new System.Drawing.Point(96, 46);
+            this.tImie.MaxLength = 50;
             this.tImie.Name = "tImie";
             this.tImie.Size = new System.Drawing.Size(195, 21);
             this.tImie.TabIndex = 4;
@@ -128,6 +129,7 @@ namespace Biblioteka
             // 
             this.tHaslo.Font = new System.Drawing.Font("Bahnschrift", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.tHaslo.Location = new System.Drawing.Point(109, 230);
+            this.tHaslo.MaxLength = 50;
             this.tHaslo.Name = "tHaslo";
             this.tHaslo.PasswordChar = '*';
             this.tHaslo.Size = new System.Drawing.Size(195, 21);
@@ -144,6 +146,7 @@ namespace Biblioteka
             // 
             this.tNazwa.Font = new System.Drawing.Font("Bahnschrift", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.tNazwa.Location = new System.Drawing.Point(119, 169);
+            this.tNazwa.MaxLength = 50;
             this.tNazwa.Name = "tNazwa";
             this.tNazwa.Size = new System.Drawing.Size(195, 21);
             this.tNazwa.TabIndex = 5;
@@ -152,6 +155,7 @@ namespace Biblioteka
             // 
             this.tNazwisko.Font = new System.Drawing.Font("Bahnschrift", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.tNazwisko.Location = new System.Drawing.Point(146, 105);
+            this.tNazwisko.MaxLength = 50;
             this.tNazwisko.Name = "tNazwisko";
             this.tNazwisko.Size = new System.Drawing.Size(195, 21);
             this.tNazwisko.TabIndex = 5;
@@ -160,6 +164,7 @@ namespace Biblioteka
             // 
             this.tPesel.Font = new System.Drawing.Font("Bahnschrift", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.tPesel.Location = new System.Drawing.Point(107, 290);
+            this.tPesel.MaxLength = 11;
             this.tPesel.Name = "tPesel";
             this.tPesel.Size = new System.Drawing.Size(195, 21);
             this.tPesel.TabIndex = 6;
