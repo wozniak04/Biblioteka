@@ -54,5 +54,26 @@ namespace Biblioteka
                 MessageBox.Show("Wypełni puste pola");
             }
         }
+
+        private void bZwrot_Click(object sender, EventArgs e)
+        {
+            var pol = new Polaczenie();
+            string imie = dtgKsiazki.Rows[dtgKsiazki.SelectedCells[0].RowIndex].Cells["Imie"].Value.ToString();
+            string nazwisko = dtgKsiazki.Rows[dtgKsiazki.SelectedCells[0].RowIndex].Cells["Nazwisko"].Value.ToString();
+            string ksiazka = dtgKsiazki.Rows[dtgKsiazki.SelectedCells[0].RowIndex].Cells["Ksiazka"].Value.ToString();
+            string pesel = dtgKsiazki.Rows[dtgKsiazki.SelectedCells[0].RowIndex].Cells["Pesel"].Value.ToString();
+
+            if(pol.zwrot(imie, nazwisko, pesel, ksiazka))
+            {
+                MessageBox.Show("Zwrócono pomyślnie");
+            }
+            else
+            {
+                MessageBox.Show("Błąd w zwracaniu");
+            }
+            var binding = new BindingList<DoOddania>(pol.wczytajKsiazkiB());
+            var source = new BindingSource(binding, null);
+            dtgKsiazki.DataSource = source;
+        }
     }
 }

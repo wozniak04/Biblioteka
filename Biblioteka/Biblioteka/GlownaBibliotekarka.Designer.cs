@@ -74,6 +74,7 @@ namespace Biblioteka
             this.bZwrot.TabIndex = 3;
             this.bZwrot.Text = "Zwrócono";
             this.bZwrot.UseVisualStyleBackColor = true;
+            this.bZwrot.Click += new System.EventHandler(this.bZwrot_Click);
             // 
             // label2
             // 

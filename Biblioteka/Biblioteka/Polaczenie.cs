@@ -160,6 +160,23 @@ namespace Biblioteka
             return ksiazki;
         }
 
+        public bool zwrot(string imie,string nazwisko,string pesel,string ksiazka)
+        {
+            conn.Open();
+            string pyt = $"DELETE FROM Wypozyczenia WHERE Imie='{imie}' AND Nazwisko='{nazwisko}' AND Pesel='{pesel}' AND Ksiazka='{ksiazka}'";
+
+            var cmd = new SqlCommand(pyt, conn);
+
+            int i = cmd.ExecuteNonQuery();
+
+            conn.Close();
+            if (i < 0)
+            {
+                return false;
+            }
+            return true;
+        }
+
 
 
     }
